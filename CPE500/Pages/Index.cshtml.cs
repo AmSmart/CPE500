@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace CPE500.Pages
@@ -24,11 +25,13 @@ namespace CPE500.Pages
 
         public List<string> AssetDirectories { get; set; }
 
+        public string PathSeparator { get; set; }
+
         public void OnGet()
         {
             string assetPath = Path.Combine(_webHost.WebRootPath, "Assets");
             AssetDirectories = Directory.EnumerateDirectories(assetPath).ToList();
-            Debug.WriteLine(AssetDirectories[0]);
+            PathSeparator = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "/" : "\\";
         }
     }
 }

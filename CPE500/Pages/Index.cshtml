@@ -12,7 +12,7 @@
     {
         string id = $"collapse{i}";
         string hashId = $"#collapse{i}";
-        string folderName = Model.AssetDirectories[i].Substring(Model.AssetDirectories[i].LastIndexOf("\\") + 1);
+        string folderName = Model.AssetDirectories[i].Substring(Model.AssetDirectories[i].LastIndexOf(Model.PathSeparator) + 1);
 
     <div id="accordion">
         <div class="card">
@@ -28,15 +28,13 @@
                 <div class="card-body">
                     @{
                         var files = System.IO.Directory.GetFiles(Model.AssetDirectories[i]);
-
-                        <a href="~/Assets/Project/Guide%20on%20Thesis%20writing.pdf">Test</a> <br />
-                        for (int j = 0; j < files.Length; j++)
+                            for (int j = 0; j < files.Length; j++)
                             {
-                                string fileName = files[j].Substring(files[j].LastIndexOf("\\") + 1);
+                                string fileName = files[j].Substring(files[j].LastIndexOf(Model.PathSeparator) + 1);
                                 string filePath = files[j].Substring(files[j].LastIndexOf("wwwroot") + 8);
-                        <a href="@filePath">@fileName</a>
-                        <br />
-                        }
+                                <a href="@filePath">@fileName</a>
+                                <br />
+                            }
                     }
                 </div>
             </div>
@@ -44,6 +42,6 @@
     </div>
     }
     <div>
-        <span>This project is built and maintained by Emmanuel Oluwagbemiga Adebiyi (Engineer Smart). <a href="https://paystack.com/pay/engineer-smart-cpe-500">If this project helped you, buy me a coffee!</a></span>        
+        <span>This project is built and maintained by Emmanuel Oluwagbemiga Adebiyi (Engineer Smart). <a href="https://paystack.com/pay/engineer-smart-cpe-500">If this project helped you, buy me a coffee!</a></span>
     </div>
 </div>
