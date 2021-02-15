@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    @for (int i = 0; i < Model.AssetDirectories.Count; i++)
+    {
+        string id = $"collapse{i}";
+        string hashId = $"#collapse{i}";        
+        string folderName = Model.AssetDirectories[i].Substring(Model.AssetDirectories[i].LastIndexOf("\\")+1);
+
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="@hashId" aria-expanded="true" aria-controls="collapseOne">
+                        @folderName
+                    </button>
+                </h5>
+            </div>
+
+            <div id="@id" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    @{
+                        var files = System.IO.Directory.GetFiles(Model.AssetDirectories[i]);
+
+                        <a href="~/Assets/Project/Guide%20on%20Thesis%20writing.pdf" >Test</a> <br/>
+
+                        for(int j = 0; j < files.Length; j++)
+                        {
+                            string fileName = files[j].Substring(files[j].LastIndexOf("\\") + 1);
+                            string filePath = files[j].Substring(files[j].LastIndexOf("wwwroot")+8);
+                            <a href="@filePath" >@fileName</a> <br/>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>

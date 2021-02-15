@@ -1,0 +1,3 @@
+﻿*CPE 515 (Engr. Prudence), Deadline: Unknown*
+1. Discuss the historical development of viruses
+2. Discuss briefly the factors that will cause someone to become a virus writer

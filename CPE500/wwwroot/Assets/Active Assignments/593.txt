@@ -1,0 +1,5 @@
+﻿*CPE 593 (Engr. Iruansi), Deadline: Thursday, 18th February, 2021*
+1. What is cross validation?
+2. Types of  cross validation - exhaustive (), non-exhaustive (k-fold, hold-out, repeated random sub sample)
+3. Discuss what training set and test set means as regards machine learning
+4. Discuss Network testing and performance
