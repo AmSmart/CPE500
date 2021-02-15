@@ -19,8 +19,9 @@ namespace CPE500
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
-                {
+                {                    
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://*:5000", "https://*:5001");
                 });
     }
 }
