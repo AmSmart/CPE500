@@ -1,3 +1,5 @@
 ﻿*CPE 515 (Engr. Prudence), Deadline: Unknown*
-1. Discuss the historical development of viruses
-2. Discuss briefly the factors that will cause someone to become a virus writer
+
+Discuss the ways of protecting against a computer against the following worm techniques: 
+I) Hit List scanning 
+II) Permutation Scanning
