@@ -1,4 +1,4 @@
-﻿*CPE 515 (Engr. Prudence), Deadline: Unknown*
+﻿*CPE 515 (Engr. Prudence), Deadline: Tuesday, 23rd February, 2021*
 
 Discuss the ways of protecting against a computer against the following worm techniques: 
 I) Hit List scanning 
