@@ -1,3 +1,6 @@
 ﻿*CPE 591 (Engr. Prudence), Deadline - Monday, 22nd February, 2021*
 
-Sophisticated approach to fault detection
+Discuss 3 sophisticated approach to fault detection:
+i) Model based
+ii) Multi variable
+iii) Statistical process control/measure
