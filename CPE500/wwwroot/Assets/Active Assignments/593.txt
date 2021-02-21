@@ -1,4 +1,4 @@
 ﻿*CPE 593 (Engr. Iruansi), Deadline: Thursday, 28th February, 2021*
 1. Read the entire course (593) and also watch this playlist for your understanding - https://youtube.com/playlist?list=PL9be9JpeQ7IPyAxVXMxGmHfl7W2zXxHiU
-2. Practice and run the code as an ANN example using MATLAB - https://youtu.be/xOzh6PMk21I
-3. Practice and run the code as CNN example using MATLAB - https://youtu.be/ZG9Y88YIqGc
+2. Practice and run the code as an ANN example using MATLAB - https://youtu.be/xOzh6PMk21I - make line by line comments on the code explaining the process
+3. Practice and run the code as CNN example using MATLAB - https://youtu.be/ZG9Y88YIqGc - make line by line comments on the code explaining the process
