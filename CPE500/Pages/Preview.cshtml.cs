@@ -17,7 +17,7 @@ namespace CPE500.Pages
         public void OnGet()
         {
             string filePathUrl = FilePath.Replace("\\", "/");
-            filePathUrl = Uri.EscapeDataString($"{Request.Scheme}://{Request.Host}{Request.PathBase}/{filePathUrl}");
+            filePathUrl = Uri.EscapeDataString($"{Request.Scheme}s://{Request.Host}{Request.PathBase}/{filePathUrl}");
             FullFilePath = filePathUrl;
         }
     }
