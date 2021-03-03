@@ -1,0 +1,13 @@
+﻿@page
+@model CPE500.Pages.PreviewModel
+@{
+    ViewData["Title"] = "Preview";
+    string src1 = $"https://view.officeapps.live.com/op/embed.aspx?src={Model.FullFilePath}&amp;embedded=true";
+    string src2 = $"https://docs.google.com/viewer?url={Model.FullFilePath}&amp;embedded=true";
+}
+
+<a href="@Model.FilePath"><h5>Download</h5></a>
+
+<iframe style="width: 100%; height: 450px;" src="@src1" frameborder="0"></iframe>
+
+<iframe style="width: 100%; height: 450px;" src="@src2" frameborder="0"></iframe>

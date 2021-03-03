@@ -47,7 +47,7 @@
                             {
                                 string fileName = files[j].Substring(files[j].LastIndexOf(Model.PathSeparator) + 1);
                                 string filePath = files[j].Substring(files[j].LastIndexOf("wwwroot") + 8);
-                                <a href="@filePath">@fileName</a>
+                                <a asp-page="Preview" asp-route-FilePath="@filePath">@fileName</a>
                                 <br />
                             }
                     }

@@ -31,7 +31,7 @@ namespace CPE500.Pages
         {
             string assetPath = Path.Combine(_webHost.WebRootPath, "Assets");
             AssetDirectories = Directory.EnumerateDirectories(assetPath).OrderBy(x => x).ToList();
-            PathSeparator = RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ? "/" : "\\";
+            PathSeparator = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "\\" : "/";
         }
     }
 }
