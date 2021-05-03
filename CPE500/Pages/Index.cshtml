@@ -11,20 +11,18 @@
     <div class="text-danger">
         <h3>Important Updates:</h3>
         <ul>
-            <li>1 Active unsubmitted assignments - see below</li>
+            <li>0 Active unsubmitted assignments - see below</li>
             <li>0 Tests loading - see below</li>
+            <li>Timetable will be out soon!</li>
             @*<li>CPE 557 Test by 10am, Tuesday, 9th March, 2021</li>*@
-            <li>CPE 575 Assignment submission deadline is on Thursday, 31st April, 2021 (Submit to Class Rep after exam!)</li>
-            <li>Remember to keep studying hard for the exams. We have all been here for over four years. It's no time to give up</li>
-            <li>Push till you've won. Let's go!</li>
-            <li>Wishing us all successful examinations</li>
+            @*<li>CPE 575 Assignment submission deadline is on Thursday, 31st April, 2021 (Submit to Class Rep after exam!)</li>*@
         </ul>
     </div>
 
-    <div class="text-center">
-        <h3 style="color: #007FFF;">1st Semester Examination Time Table</h3>
-        <img src="~/exam time table.jpg"/>
-    </div>
+    @*<div class="text-center">
+            <h3 style="color: #007FFF;">1st Semester Examination Time Table</h3>
+            <img src="~/exam time table.jpg" />
+        </div>*@
 
     @for (int i = 0; i < Model.AssetDirectories.Count; i++)
     {
@@ -32,20 +30,20 @@
         string hashId = $"#collapse{i}";
         string folderName = Model.AssetDirectories[i].Substring(Model.AssetDirectories[i].LastIndexOf(Model.PathSeparator) + 1);
 
-    <div id="accordion">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="@hashId" aria-expanded="true" aria-controls="collapseOne">
-                        @folderName
-                    </button>
-                </h5>
-            </div>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="@hashId" aria-expanded="true" aria-controls="collapseOne">
+                            @folderName
+                        </button>
+                    </h5>
+                </div>
 
-            <div id="@id" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                <div class="card-body">
-                    @{
-                        var files = System.IO.Directory.GetFiles(Model.AssetDirectories[i]);
+                <div id="@id" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        @{
+                            var files = System.IO.Directory.GetFiles(Model.AssetDirectories[i]);
                             for (int j = 0; j < files.Length; j++)
                             {
                                 string fileName = files[j].Substring(files[j].LastIndexOf(Model.PathSeparator) + 1);
@@ -54,12 +52,16 @@
                                 @*<a asp-page="Preview" asp-route-FilePath="@filePath">@fileName</a>*@
                                 <br />
                             }
-                    }
+                        }
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     }
+    <div class="text-center">
+            <h3 style="color: #007FFF;">2nd Semester Lecture Time Table</h3>
+            <img src="~/lecture time table.jpg" />
+        </div>
     <div>
         <span>This project is built and maintained by Emmanuel Oluwagbemiga Adebiyi (Engineer Smart). <a href="https://paystack.com/pay/engineer-smart-cpe-500">If this project helps you, buy me a drink!</a></span>
     </div>
