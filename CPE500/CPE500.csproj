@@ -5,7 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\Assets\556\" />
     <Folder Include="wwwroot\Assets\Active Assignments\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Assets\526\Course Outline.pdf" />
+    <None Include="wwwroot\Assets\526\Introduction to Robotics, Mechanics and Control 3rd Edition - John J. Craig.pdf" />
   </ItemGroup>
 
 </Project>
