@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Assets\556\" />
     <Folder Include="wwwroot\Assets\Active Assignments\" />
   </ItemGroup>
 
